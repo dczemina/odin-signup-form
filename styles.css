@@ -1,0 +1,8 @@
+@font-face {
+    font-family: norse-bold;
+    src: url('Norse-Bold.otf');
+}
+
+.logo-font {
+    font-family: norse-bold, sans-serif;
+}
