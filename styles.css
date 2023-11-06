@@ -1,3 +1,16 @@
+body {
+    /* Remove margin/padding */
+    margin: 0px;
+    padding: 0px;
+    /* Center all content */
+    display: flex;
+    /* align-items: stretch; */
+    justify-content: center;
+    height: 100vh;
+    /* background */
+    background-color: #0F0F0F
+}
+
 @font-face {
     font-family: norse-bold;
     src: url('Norse-Bold.otf');
@@ -5,4 +18,21 @@
 
 .special-font {
     font-family: norse-bold, sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: stretch;
+    width: min(100%, 800px);
+    /* height: min(100vh, 600px); */
+}
+
+#logo-section {
+    background-color: steelblue;
+    flex: 1 2 0;
+}
+
+#form-section {
+    background-color: slateblue;
+    flex: 2 1 0;
 }
