@@ -1,3 +1,22 @@
+:root {
+    --color-bone-translucent: rgba(227,218,201,0.5);
+    --color-bone: rgba(227,218,201,1);
+    --color-primary-translucent: rgba(15,15,15,0.7);
+    --color-primary: rgba(15,15,15,1);
+}
+
+/* reset */
+html {
+    color: var(--color-bone);
+    background-color: var(--color-primary);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+/* styling */
 body {
     /* Remove margin/padding */
     margin: 0px;
@@ -7,8 +26,18 @@ body {
     /* align-items: stretch; */
     justify-content: center;
     height: 100vh;
-    /* background */
-    background-color: #0F0F0F
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-primary-translucent {
+    background-color: var(--color-primary-translucent);
 }
 
 @font-face {
@@ -20,16 +49,41 @@ body {
     font-family: norse-bold, sans-serif;
 }
 
+.caption {
+    font-size: 0.8rem;
+}
+
 main {
     display: flex;
     align-items: stretch;
     width: min(100%, 800px);
-    /* height: min(100vh, 600px); */
 }
 
 #logo-section {
-    background-color: steelblue;
     flex: 1 2 0;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-bone);
+    position: relative;
+}
+
+#logo-text {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 100%;
+}
+
+#logo-image-credit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 #form-section {
