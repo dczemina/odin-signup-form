@@ -1,8 +1,12 @@
 :root {
     --color-bone-translucent: rgba(227,218,201,0.5);
     --color-bone: rgba(227,218,201,1);
+    --color-pale-bone-translucent: rgba(246,243,238,0.5);
+    --color-pale-bone: rgba(246,243,238,1);
     --color-primary-translucent: rgba(15,15,15,0.7);
     --color-primary: rgba(15,15,15,1);
+    --color-mud-translucent: rgba(67,55,35,0.5);
+    --color-mud: rgba(67,55,35,1);
 }
 
 /* reset */
@@ -40,6 +44,18 @@ body {
     background-color: var(--color-primary-translucent);
 }
 
+.bg-secondary {
+    background-color: var(--color-pale-bone);
+}
+
+.bg-secondary-translucent {
+    background-color: var(--color-pale-bone-translucent);
+}
+
+.bg-tertiary {
+    background-color: white;
+}
+
 @font-face {
     font-family: norse-bold;
     src: url('Norse-Bold.otf');
@@ -56,7 +72,7 @@ body {
 main {
     display: flex;
     align-items: stretch;
-    width: min(100%, 800px);
+    width: min(100%, 1300px);
 }
 
 #logo-section {
@@ -87,6 +103,13 @@ main {
 }
 
 #form-section {
-    background-color: slateblue;
     flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    color: var(--color-mud)
+}
+
+#form-section > * {
+    flex: 1 1 0;
 }
