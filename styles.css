@@ -69,10 +69,15 @@ body {
     font-size: 0.8rem;
 }
 
+.super-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
 main {
     display: flex;
     align-items: stretch;
-    width: min(100%, 1300px);
+    width: min(100%, 1200px);
 }
 
 #logo-section {
@@ -112,4 +117,13 @@ main {
 
 #form-section > * {
     flex: 1 1 0;
+    padding: 2rem;
+}
+
+#call-to-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 1rem;
 }
