@@ -86,85 +86,95 @@ body {
     font-weight: bold;
 }
 
+/* Standard Styling for Content */
 main {
     display: flex;
+    flex-direction: row;
     align-items: stretch;
     width: min(100%, 1200px);
 }
 
-@media screen and (min-width: 420px) and (max-width: 576px) {
+#logo-section {
+    flex: 1 2 0;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-bone);
+    position: relative;
+}
+
+#logo-text {
+    font-size: 1.25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+}
+    
+#logo-image-credit {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 419px) {
+    /* Flex column the input fields */
+    #form-fields > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Flex column the main sections */
     main {
-        display: flex;
         flex-direction: column;
-        align-items: stretch;
-        width: min(100%, 1200px);
-    }
-
-    #logo-section {
-        flex: 1 2 0;
-        background-image: url('background-image.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        color: var(--color-bone);
-        position: relative;
-    }
-
-    #logo-text {
-        font-size: 1.25rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4px;
-        box-sizing: border-box;
     }
 
     #logo-text > h1,p {
         margin: 4px;
     }
+
+    #logo-image-credit > .caption {
+        font-size: 0.5rem;
+    } 
+}
+
+@media screen and (min-width: 420px) and (max-width: 576px) {
     
     #logo-image-credit {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
     }
 
-    #logo-image-credit > .caption {
-        font-size: 0.5rem;
+    #form-fields > form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
     }
 }
 
 @media screen and (min-width: 577px) {
-
-    #logo-section {
-        flex: 1 2 0;
-        background-image: url('background-image.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        color: var(--color-bone);
-        position: relative;
-    }
 
     #logo-text {
         font-size: 1.5rem;
         position: absolute;
         left: 0;
         top: 10%;
-        width: 100%;
     }
     
     #logo-image-credit {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
     }
 }
 
@@ -187,62 +197,6 @@ main {
     justify-content: flex-end;
     align-items: stretch;
     gap: 1rem;
-}
-
-#form-fields > form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-@media screen and (max-width: 419px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        width: min(100%, 1200px);
-    }
-
-    #logo-section {
-        flex: 1 2 0;
-        background-image: url('background-image.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        color: var(--color-bone);
-        position: relative;
-    }
-    #form-fields > form {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    #logo-text {
-        font-size: 1.25rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4px;
-        box-sizing: border-box;
-    }
-
-    #logo-text > h1,p {
-        margin: 4px;
-    }
-    
-    #logo-image-credit {
-        width: 100%;
-    }
-
-    #logo-image-credit > .caption {
-        font-size: 0.5rem;
-    }
 }
 
 .field-set > label {
