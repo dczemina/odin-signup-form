@@ -125,7 +125,7 @@ main {
 /* Responsive Design */
 @media screen and (max-width: 419px) {
     /* Flex column the input fields */
-    #form-fields > form {
+    #form-content > form {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -149,7 +149,7 @@ main {
 }
 
 @media screen and (min-width: 420px) {
-    #form-fields > form {
+    #form-content > form {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -189,6 +189,16 @@ main {
 #form-section > * {
     flex: 1 1 0;
     padding: 2rem;
+}
+
+#form-content {
+    display: flex;
+    gap: 12px;
+}
+
+#form-validation {
+    font-size: 0.8rem;
+    color: var(--color-red);
 }
 
 #call-to-action {
